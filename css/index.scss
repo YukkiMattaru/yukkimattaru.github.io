@@ -1,0 +1,349 @@
+$GREY_COLOR: #6e7178;
+$GREY_BOTTOM_COLOR: #dde0e6;
+$GREEN_COLOR: #06ac3e;
+$BLUE_COLOR: #2375e1;
+$GREY_FONT_COLOR: #2d2f33;
+
+.page-wrapper {
+  width: 100%;
+}
+
+button {
+  appearance: none;
+  border: 0;
+  background: #fff;
+  color: #000;
+  padding: 0px;
+  cursor: pointer;
+}
+
+header {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  height: 64px;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 22px;
+  border-bottom: 1px solid $GREY_BOTTOM_COLOR;
+
+  .header__back-link a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    p {
+      color: $GREY_FONT_COLOR;
+    }
+    img {
+      margin-right: 24px;
+    }
+  }
+
+  .header__actions a:first-child {
+    margin-right: 12px;
+  }
+}
+
+nav {
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 16px 0px 32px;
+  height: 48px;
+
+  .nav-main__left,
+  .nav-main__right,
+  .nav-main__left ul,
+  .nav-main__right ul,
+  .nav-main__left ul a,
+  .nav-main__right ul a {
+    color: $GREY_COLOR;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .nav-main__left,
+  .nav-main__right {
+    height: 100%;
+    align-items: center;
+    ul,
+    li,
+    a,
+    button {
+      height: 100%;
+      box-sizing: border-box;
+      align-items: center;
+    }
+    li {
+      padding-right: 16px;
+    }
+    img {
+      padding-right: 8px;
+    }
+  }
+
+  .nav-item_active {
+    color: $BLUE_COLOR;
+    box-shadow: 0px 3px 0px 0px $BLUE_COLOR;
+    box-sizing: border-box;
+  }
+}
+
+.settings-button {
+  display: flex;
+  align-items: center;
+  img:first-child {
+    width: 20px;
+    height: 20px;
+  }
+  img:nth-child(2) {
+    padding-right: 0;
+  }
+}
+
+.page-content {
+  display: flex;
+}
+
+main {
+  width: 100%;
+}
+
+.post,
+.post_splitted {
+  font-size: 14px;
+  color: $GREY_FONT_COLOR;
+  background: #fff;
+  margin: 24px 24px 24px 32px;
+  padding: 16px;
+  border: 1px solid $GREY_BOTTOM_COLOR;
+  .post__title {
+    margin: 0px 0px 16px 0px;
+  }
+
+  .post__title-info {
+    p {
+      color: $GREY_COLOR;
+      margin-right: 16px;
+    }
+  }
+
+  .post__title,
+  .post__title-info {
+    .post__ok-icon {
+      width: 12px;
+      height: 12px;
+      background: $GREEN_COLOR;
+      border: 2px solid $GREEN_COLOR;
+      border-radius: 50%;
+      margin-right: 16px;
+    }
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .post__main-content {
+    img {
+      width: 100%;
+    }
+  }
+
+  .post__comment {
+    margin-top: 16px;
+    display: flex;
+    flex-direction: column;
+    .comment__title {
+      display: flex;
+      img {
+        margin-right: 8px;
+      }
+      a {
+        color: $BLUE_COLOR;
+      }
+    }
+    .comment__content {
+      p {
+        font-size: 14px;
+        line-height: 20px;
+      }
+      display: flex;
+      flex-direction: column;
+      border-left: 2px solid #c4c4c4;
+      margin-top: 16px;
+      padding-left: 16px;
+      box-sizing: border-box;
+      .comment__sender-info {
+        margin-top: 8px;
+        color: $GREY_COLOR;
+      }
+    }
+    .comment__footer {
+      margin-top: 16px;
+      display: flex;
+      justify-content: space-between;
+      .comment__stats,
+      .comment__stats div,
+      .comment__read a {
+        display: flex;
+        align-items: center;
+      }
+      .comment__stats {
+        div {
+          margin-right: 16px;
+        }
+        img {
+          margin-right: 8px;
+        }
+      }
+      .comment__read {
+        p {
+          color: $GREY_COLOR;
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+}
+
+.post_splitted {
+  .post__title {
+    margin: 0;
+    .post__title-info {
+      .post__ok-icon,
+      p {
+        display: none;
+      }
+      button img {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .post__main-content,
+  .post__comment {
+    display: none;
+  }
+}
+
+aside {
+  flex-basis: 352px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  color: $GREY_FONT_COLOR;
+  margin: 24px 24px 24px 0px;
+
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid $GREY_BOTTOM_COLOR;
+    background: #fff;
+    padding: 32px;
+
+    .profile__image {
+      margin-bottom: 16px;
+      img {
+        width: 144px;
+        height: 144px;
+        border-radius: 100%;
+      }
+    }
+
+    p {
+      margin-bottom: 8px;
+    }
+
+    .profile__name {
+      font-size: 18px;
+      color: #000;
+    }
+
+    .social-links ul {
+      margin-top: 8px;
+      display: flex;
+      li {
+        margin-right: 10px;
+        &:last-child {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .aside-nav {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid $GREY_BOTTOM_COLOR;
+    background: #fff;
+    margin-top: 24px;
+
+    .aside-nav__toggle {
+      padding: 0px 24px;
+      color: #000;
+      height: 48px;
+      box-sizing: border-box;
+      border-bottom: 1px solid $GREY_BOTTOM_COLOR;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .aside-nav__menu {
+      ul {
+        display: flex;
+        flex-direction: column;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: all 0.3s;
+        p {
+          transition: all 0.3s;
+        }
+        &:hover {
+          background: $BLUE_COLOR;
+          p {
+            color: #fff;
+          }
+        }
+      }
+      a {
+        padding: 12px 24px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        div {
+          display: flex;
+          align-items: center;
+        }
+        img {
+          padding-right: 16px;
+        }
+        .aside-nav__additional {
+          color: #a1a5ae;
+        }
+        .aside-nav__additional_red {
+          color: #fff;
+          background: #ef4115;
+          border-radius: 50%;
+          padding: 4px 4px;
+          
+        }
+        .aside-nav__additional_green {
+          color: #fff;
+          background: #26a69a;
+          border-radius: 50%;
+          padding: 4px 4px;
+        }
+      }
+    }
+  }
+}
