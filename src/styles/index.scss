@@ -17,7 +17,7 @@ button {
   cursor: pointer;
 }
 
-header {
+.header {
   background: #ffffff;
   display: flex;
   justify-content: space-between;
@@ -88,7 +88,7 @@ nav {
   }
 
   .nav-item_active {
-    color: $BLUE_COLOR;
+    color: $BLUE_COLOR !important;
     box-shadow: 0px 3px 0px 0px $BLUE_COLOR;
     box-sizing: border-box;
   }
@@ -346,4 +346,23 @@ aside {
       }
     }
   }
+}
+
+.map, .timer {
+  .map__header, .timer__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 16px;
+  }
+  #yandex-map {
+    height: 600px;
+  }
+  margin: 0 auto;
+  width: 100%;
+  font-size: 14px;
+  color: $GREY_FONT_COLOR;
+  background: #fff;
+  margin: 24px 24px 24px 32px;
+  padding: 16px;
+  border: 1px solid $GREY_BOTTOM_COLOR;
 }
